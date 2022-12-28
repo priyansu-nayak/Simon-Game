@@ -101,6 +101,25 @@ function nextSequence() {
   });
 
 
+  
+$("body").on("keydown",function(event){
+  var key=event.key;
+  console.log(key);
+  switch(key){
+    case 'r':key="red";
+    break;
+    case 'g':key="green";
+    break;
+    case 'b':key="blue";
+    break;
+    case 'y':key="yellow";
+    break;
+    default: console.log("Invalid");
+  }
+  playSound(key);
+  animatePress(key);
+
+});
 
 
 //detects which key was pressed
